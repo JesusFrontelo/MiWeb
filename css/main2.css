@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #444;
+  color: #fff; 
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+body#bg-img {
+  background: url(../img/background.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+body#bg-img:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgba(68,68,68,0.9);  
+}
+
+/* ---------------Cabeceras--------------- */
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 400;
+}
+
+h1.cabecera-big {
+  font-size: 6rem;
+}
+
+h2.cabecera-small {
+  margin-bottom: 2rem;
+  padding: 0.2rem 1rem;
+  background: rgba(73, 73, 73, 0.5);
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.texto-secundario {
+  color: #eece1a;
+}
+
+main {
+  padding: 4rem;
+  min-height: calc (100vh - 60px);
+}
+main#home {
+  overflow: hidden;
+}
+main#home h1 {
+  margin-top: 20vh;
+}
+.iconos {
+  margin-top: 1rem;
+}
+a:hover {
+  color: #eece1a;
+  transition: all 0.5s ease-out;
+}
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'bioimage bio bio' 'trabajo1 trabajo2 trabajo3';
+  grid-template-columns: repeat(3, 1fr);
+}
+.bio-image {
+  grid-area: bioimage;
+  margin: auto;
+  border-radius: 50%;
+  border: #eece1a 3px solid;
+
+}
+
+.bio {
+  grid-area: bio;
+  font-size: 1.5rem;
+}
+
+trabajo1 {
+  grid-area: trabajo1;
+}
+trabajo2 {
+  grid-area: trabajo2;
+}
+trabajo3 {
+  grid-area: trabajo3;
+}
+.trabajo {
+  background: rgb(76, 76, 76);
+  padding: 0.5rem;
+  border-bottom: #eece1a 5px solid;
+}
+
+.proyectos {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.proyectos img {
+  width: 100%;
+  border: 3px #fff solid;
+}
+
+.proyectos img:hover {
+    opacity: 0.5;
+    border-color: #eece1a;
+    transition: all 0.5s ease-out;
+}
+.proyectos iframe {
+  width: 100%;
+  border: 3px #fff solid;
+}
+
+.proyectos iframe:hover {
+    opacity: 0.5;
+    border-color: #eece1a;
+    transition: all 0.5s ease-out;
+}
+
+/* ----------------Estilo de la pagina de contacto----------------*/
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+}
+.boxes div {
+  font-size: 2rem;
+  border: 3px white solid;
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 3rem;
+  transition: all 0.5s ease-out;
+}
+
+.boxes div:hover {
+  padding: 0.5rem 1.5rem;
+  background: #eece1a;
+  color: #000;
+}
+.boxes div:hover span {
+  color: #000;
+} 
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; 
+}
+.btn:hover, .btn-dark:hover, .btn-light:hover {
+  background: #eece1a;
+  color: #000; }
+
+.btn-dark {
+  background: black;
+  color: #fff; 
+}
+
+.btn-light {
+  background: #c4c4c4;
+  color: #333; 
+}
+
+#main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: rgb(62,62,62);
+    color: #fff;
+    height: 60px;
+}
