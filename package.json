@@ -1,0 +1,14 @@
+{
+  "name": "miweb2",
+  "version": "1.0.0",
+  "description": "Website Responsivo",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "J. Frontelo",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  }
+}

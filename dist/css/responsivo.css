@@ -1,0 +1,130 @@
+/*-----------Diseños Responsivos-----------*/
+
+/* Pantallas Pequeñas*/
+@media screen and (max-width: 500px) {
+    main {
+      padding: 2rem; 
+      align-items: center;
+      text-align: center;
+    }
+    main #home h1 {
+        margin-top: 10vh; 
+    }
+    main .cabecera-big {
+        margin-top: 1rem;
+        font-size: 3rem; 
+        line-height: 1;
+        margin-bottom: 1rem;
+    }
+    ul.menu-nav, div.menu-foto {
+        float: none;
+        width: 100%;
+        min-height: 0;
+    }
+    ul.menu-nav.show {
+        transform: translate3d(0,0,0);
+    }
+    div.menu-foto.show {
+        transform: translate3d(0,0,0);
+    }
+    .menu-nav {
+        height: 65vh;
+        transform: translate3d(-100%,0,0);
+        font-size: 24px;
+    }
+    .menu-foto {
+        height: 35vh;
+        transform: translate3d(100%,0,0);
+    }   
+    .menu-foto.foto {
+        background: url('../img/picture-small.jpg');
+    }
+    .about-info {
+        grid-template-areas: 
+        'bioimage'
+        'bio'
+        'job1'
+        'job2'
+        'job3';
+        grid-template-columns: 1fr;
+    }
+    .proyectos {
+        grid-template-columns: 1fr;
+    } 
+    .boxes div {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+        margin-bottom: 1.5rem;
+      }
+}
+
+/*--------------Pantallas Medianas--------------*/
+@media screen and (min-width: 501px) and (max-width: 768px) {
+    main {
+        align-items: center;
+        text-align: center;
+    }
+    .cabecera-big {
+        line-height: 1;
+        margin-bottom: 1rem;
+    }
+    ul.menu-nav {
+        float: none;
+        width: 100%;
+        min-height: 0;
+    }
+    ul.menu-nav.show {
+        transform: translate3d(0,0,0);
+    }
+    div.menu-foto {
+        float: none;
+        width: 100%;
+        min-height: 0;
+    }
+    div.menu-foto.show {
+        transform: translate3d(0,0,0);
+    }
+    .menu-nav {
+        height: 75vh;
+        transform: translate3d(-100%,0,0);
+        font-size: 24px;
+    }
+    .menu-foto {
+        height: 25vh;
+        transform: translate3d(100%,0,0);
+    }   
+    .menu-foto.foto {
+        /* En este background tengo que poner la foto pequeña */    
+        background: url('../img/picture-small.jpg');
+        width: 150px;
+        height: 150px;
+    }
+    .about-info {
+        grid-template-areas: 
+        'bioimage'
+        'bio'
+        'job1'
+        'job2'
+        'job3';
+        grid-template-columns: 1fr;
+    }
+    .proyectos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*Pantallas Grandes*/
+@media screen and (min-width: 796px) and (max-width: 1170px) {
+    .proyectos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+
+/*Pantallas Extra-Grandes*/
+@media screen and (min-width: 1171px) {
+    .proyectos {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+}

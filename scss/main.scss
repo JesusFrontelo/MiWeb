@@ -1,0 +1,180 @@
+@import 'config';
+@import 'menu';
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    @include background;
+    background: #444;
+    color: set-text-color($primary-color); 
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+  }
+  
+  /* ---------------Cabeceras--------------- */
+  h1, h2, h3 {
+    margin: 0;
+    font-weight: 400;
+    &.cabecera-big {
+        font-size: 6rem;
+      }
+    &.cabecera-small {
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+        background: lighten(#444,2),0.5;
+      }
+    }
+  
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  
+  header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+  }
+  
+  .texto-secundario {
+    color: #eece1a;
+  }
+  
+  main {
+    padding: 4rem;
+    //height: 100%;
+    min-height: calc(100vh - 60px);
+
+    .iconos {
+        margin-top: 1rem;
+      }
+    &#home {
+        overflow: hidden;
+        h1 {
+            margin-top: 20vh;
+          }
+      }
+    a:hover {
+        color: #eece1a;
+        @include easeOut()
+      } 
+}
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 
+  'bioimage bio bio'
+  'trabajo1 trabajo2 trabajo3';
+  grid-template-columns: repeat(3, 1fr);
+
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+  }
+  
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+  
+  .trabajo1 {
+    grid-area: trabajo1;
+  }
+  .trabajo2 {
+    grid-area: trabajo2;
+  }
+  .trabajo3 {
+    grid-area: trabajo3;
+  }
+  .trabajo {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+  }
+}
+
+/* -----------------Estilos de la pagina Mis Proyectos----------------- */
+.proyectos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem;
+
+  img {
+    width: 100%;
+    border: 3px #fff solid;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }
+}
+
+/* ----------------Estilo de la pagina de contacto----------------*/
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+
+  div{
+    font-size: 2rem;
+    border: 3px white solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+      span {
+        color: set-text-color($secondary-color);
+      }
+    }
+  }
+}
+
+// Estilos de los botones
+
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, 50);
+  color: #fff;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, 50);
+  color: #333;
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: set-text-color(primary-color);
+  height: 60px;
+}
+
+@import 'mobile';
