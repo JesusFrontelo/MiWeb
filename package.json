@@ -12,7 +12,16 @@
   "license": "ISC",
   "dependencies": {
     "gh-pages": "^1.2.0",
+    "lodash": "^4.17.21",
     "node-sass": "^4.9.3",
     "npm": "^6.4.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JesusFrontelo/MiWeb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JesusFrontelo/MiWeb/issues"
   }
 }
